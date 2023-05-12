@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab</title>
+ 
+<script>
+    function computeLoan(){
+        var Loanamount=document.getElementById('amount').value;
+        var Interest=document.getElementById('interest').value;
+        var Months=document.getElementById('months').value;
+        var Interest=(Loanamount*(Interest*0.01))/Months;
+        var payamount=((Loanamount/Months)+Interest).toFixed(2);
+         
+        document.getElementById("payamount").innerHTML="Monthlypayment=Rs."+payamount;
+    }
+        </script>
+</head>
+        <body>
+ <p>Loanamount: Rs. <input id="amount" type=" number " min="1" max="100000" onchange="computeLoan()"></p>
+ <p>Interest:<input id="interest" type="number" min="1" max="100" onchange="computeLoan()"></p>
+ <p>Months:<input id="months" type="number" min="1" max="72" value="1" step=".1" onchange="computeLoan()"></p>
+ <h2 id="payamount"></h2>
+   
+     
+</body>
+</html>

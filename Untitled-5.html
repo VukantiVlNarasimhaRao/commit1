@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rp</title>
+    <script>
+         function repayment(){
+         var amount=document.getElementById('amount').value;
+         var Interest=document.getElementById('Interest').value
+         var months=document.getElementById('months').value;
+         var Interest=(amount*(Interest*0.01))/months
+         var Monthlypayment=((amounnt/months)+Interest);
+         document.getElementById('Monthlypayment').innerHTML=
+         +Monthlypayment;
+         }
+    </script>
+</head>
+<body>
+    <p >amount Rs. <input id="amount" type="number" min="1" max=
+        "100000" onchange="repayment()"></p>
+    <p>months <input id="months" type="number" min="1
+        " max="30" onchange="repayment()" value="1"step="(.1)" ></p>
+    <p>Interest <input id="Interest" type="number" min="1" max="5"
+        onchange="repayment()">
+    </p>
+    <h2 id="Monthlypayment"></h2>
+</body>
+</html>
