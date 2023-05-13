@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL</title>
+</head><script LANGUAGE="JAVASCRIPT">
+    function EL(){
+        var Units=document.getElementById('Units').value;
+        if(Units<=100){
+            amount=((Units*2));
+            document.getElementById('amount').innerHTML=+amount;
+        }
+        if(Units<=200){
+            amount=((100*2)+(Units-100)*3);
+            document.getElementById('amount').innerHTML=+amount;
+            }
+            else{
+            amount=((100*2)+(100*3)+((Units-200)*4));
+            document.getElementById('amount').innerHTML=+amount;}
+            var surcharge=((amount)*(2/100));
+            surcharge=surcharge.toString();
+            document.getElementById('surcharge').innerHTML=+surcharge;
+            var amounttopay=(amount+(amount*0.02));
+            document.getElementById('amounttopay').innerHTML=+amounttopay;
+             }
+</script>
+<body>
+ <div style="border: 1px solid black; width: 60%; height: 500px;
+ margin-left: 20%; margin-top: 50px">
+ <p style="text-align: center; margin-top: 20px;">ELCTRICITY BOARD X STATE</p>
+ <p  style="text-align: center; margin-top: 50px;"> BILLING AMOUNT:</p>
+ <p style="text-align: center;"> Units:<input id="Units"
+     type="number" min="1"; max="1000" onchange="EL()"></p>
+ <h2 style= "text-align: center; " ></h2>
+ <p style="text-align: center;" >amount:</p>
+ <h2 style="text-align: center;"  id="amount"></h2>
+ <p style="text-align: center;" > surcharge </p>
+ <h2 style="text-align: center;"  id="surcharge"></h2> 
+ <p  style="text-align: center;">amounttopay:</p>
+ <h2 style="text-align: center;" id="amounttopay"></h2>
+ <p style="text-align: center;"> Last Date for Payment: 10th of every month</p>
+ <P style="text-align: center;">THANK YOU</P>
+ </div>   
+</body>
+</html>

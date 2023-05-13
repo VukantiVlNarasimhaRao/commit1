@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small boxes</title>
+</head><script LANGUAGE="JAVASCRIPT">
+    function layout(){
+        var money= document.getElementById('money').value;
+        var total=(money*1);
+        total=total.toString();
+         document.getElementById('total').innerHTML=+total;
+         var interest=document.getElementById('interest').value;
+        var amount =(total*interest*.01);
+          amount=amount.toString();
+          document.getElementById('amount').innerHTML=+amount;
+          var  becollectedRupees=((money*1)+(total*(interest*0.01)));
+      becollectedRupees=becollectedRupees.toString();
+      document.getElementById('becollectedRupees').value;
+      document.getElementById('becollectedRupees').innerHTML=+becollectedRupees;
+      var nodue=becollectedRupees;
+      document.getElementById('nodue').innerHTML=+nodue
+     }
+    </script>
+<body>  
+    <div style="border: 1px solid black;width: 90%;
+    height: 500px;margin-left: 5%; margin-top: 100px; " >
+     <div    style="border: 1px solid
+     black  ;width: 30%;
+    height: 100px;margin-left: 5%; margin-top: 50px;" >
+    <p> money:<input id="money" type="number" onchange="layout()">
+        </p>
+        <h2 id="total"></h2>
+    </div>
+<div style="border: 1px solid black;width: 30%;
+height: 100px;margin-left: 5%; margin-top:50px; ">
+<p>interest:<input id="interest" type="number" onchange="layout()">
+</p><h2 id="amount"></h2>
+</div>
+<div style="border: 1px solid black  ;width: 30%;
+height: 100px;margin-left:5%; margin-top:50px;float: left;">
+ <p> becollectedRupees:</p>
+<h2 id="becollectedRupees" onchange="layout()"></h2></div>
+<div style="border: 1px solid black;width:30% ;height: 100px;
+margin-left:5% ;margin-top:50px ;float: left;">
+<div style="border: 1px solid block; width:30%;height:100px;
+margin: 5%; margin: top 50px;"><p >paid/nodue:</p>
+<h2 id="nodue" type="text"  onchange="layout()"></h2>
+
+</div>
+
+</div>
+    
+</body>
+</html>

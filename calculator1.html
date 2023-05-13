@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator1</title>
+    <script>
+        function calculator1(){
+            var amount=document.getElementById('amount').value;
+            var interest=document.getElementById('interest').value;
+            var months=document.getElementById('months').value;
+            var  total=amount/months;
+            document.getElementById('total').innerHTML='total'
+        } 
+
+
+
+    </script>
+</head>
+<body>
+    <p>amount<input id="amount" type="number" onchange="calculator1()"></p>
+    <p> interest <input id="interest" type="number" onchange="calculator1()"></p>
+    <p> months <input id="months" type="number" onchange="calculator1()"></p>
+    <h2 total></h2>
+
+    
+</body>
+</html>
